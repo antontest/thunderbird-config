@@ -1,0 +1,102 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+/* Odstranění pole vyhledávání na novém panelu */
+@-moz-document url-prefix("about:newtab") {
+    #newtab-search-form {
+        display: none !important;
+    }
+}
+
+/* Zakázání tagu marguee – běžící text */
+marquee {
+    -moz-binding: none; display: block; height: auto !important;
+}
+
+/* Vynucení podtržení všech odkazů na webech */
+a {
+    text-decoration: underline !important
+}
+
+/* Změna kurzoru nad JavaScriptovými odkazy */
+a[href^="javascript:"] {
+    cursor: move;
+} 
+
+:-moz-dropdown-list {
+    border: 1px solid black !important;
+    border-top-style: solid !important;
+}
+
+marquee {
+    -moz-binding: none; display: block; height: auto !important;
+}
+
+:link:hover[target="_blank"],:visited:hover[target="_blank"] {
+    color: white !important; background: red !important;
+}
+:link:hover[target="_new"],:visited:hover[target="_new"] {
+    color: white !important; background: red !important;
+}
+
+.moz-text-html font, .moz-text-html div, .moz-text-html body {
+/*     font-size: inherit !important; */
+    font-size: inherit !important;
+    font-family: inherit !important;
+    color: inherit !important;
+    background-color: inherit !important;
+    background-image: inherit !important;
+    text-align: inherit !important;
+    text-indent: inherit !important;
+}
+
+
+/* Quote Levels Colors */
+blockquote[type=cite] {
+    color: navy !important; background-color: RGB(245,245,245) !important;
+}
+blockquote[type=cite] blockquote {
+    color: maroon !important; background-color: RGB(235,235,235) !important;
+}
+blockquote[type=cite] blockquote blockquote {
+    color: green !important; background-color: RGB(225,225,225) !important;
+}
+blockquote[type=cite] blockquote blockquote blockquote {
+    color: purple !important; background-color: RGB(215,215,215) !important;
+}
+blockquote[type=cite] blockquote blockquote blockquote blockquote {
+    color: teal !important; background-color: RGB(205,205,205) !important;
+}
+
+blockquote[type=cite] {
+    color: navy !important;
+    background-color: RGB(235,235,235) !important; 
+    border-color: navy !important;
+    border-left: 3px solid !important;
+    border-right: 3px solid !important;
+}
+blockquote[type=cite] blockquote {
+    color: maroon !important;
+    background-color: RGB(225,225,225) !important;
+    border-color: maroon !important;
+    border-left: 3px solid !important;
+    border-right: 3px solid !important;
+}
+
+span[_moz_quote=true] {
+    color: navy !important;
+    background-color: RGB(235,235,235) !important;
+    display: block;
+    width: 82ch !important;
+}
+
+/* Change color of active tab */
+tab[selected="true"] {
+    background-color: rgb(255,1,234) !important;
+    color: black !important;
+}
+
+/* Change color of normal tabs */
+tab {
+    background-color: rgb(200,196,188) !important;
+    color: gray !important;
+}

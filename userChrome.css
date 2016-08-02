@@ -1,0 +1,293 @@
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+* {
+    font-family: Consolas !important;
+    font-size: 14pt !important;
+}
+
+/******************************* Menubar ******************************/
+menubar > menu{
+    color: #111 !important;
+}
+
+/**************************** Mail Toolbars ***************************/
+#mail-toolbox,
+.mail-toolbox,
+#chat-view-toolbox,
+#ab-bar2,
+#event-toolbar,
+#composeToolbar2,
+#unifinder-searchBox {
+    -moz-appearance: none !important;
+/*     background: #000 !important; */
+    padding: 1px 6px 1px 6px !important;
+/*     color: #000 !important; */
+    margin-top: 0px !important;
+    -moz-background-clip: padding !important;
+    border-style: solid !important;
+    border-width: 1px 0 1px 0 !important;
+/*     border-color: #000 !important; */
+/*     border-top-color: #000 !important; */
+}
+
+#task-addition-box {
+    padding: 0 6px 0 6px !important;
+}
+
+#unifinder- searchBox {
+    border-color: #393939 !important;
+    box-shadow: none !impor     tant;
+}
+
+.msgNotificationBar {
+    background: #940109 !important;
+    color: #d2d2d2 !important;
+    text-shadow: 0 1px 1px rgba(0,0,0, 0.6) !important; 
+    border: 0px solid rgb(0,0,0) !important;
+    padding: 6px !important;
+}
+
+.msgNotificaton-smallText {
+    color: #0a0a0a !important;
+    text-shadow: none !important; 
+}
+
+#threadTree treechildren::-moz-tree-row { 
+    height: 30px!important;
+    font-size: 15px !important;
+    margin-top: 2px !important; 
+    margin-bottom: 2px !important; 
+} 
+
+/*==================LIGHTNING OPTIONS=====================*/
+toolbox /*Change background of toolbar header*/ {
+    background-color: gray!important;
+} 
+
+calendar-alarm-widget[selected="true"] /*Background color of popup alarm*/ {
+    background-color: #FF0000 !important;
+}
+
+/***********************THUNDERBIRD************************/
+/*************************GLOBAL***************************/
+{color:#000000 !important;}
+
+
+/* BEGIN UNREAD MESSAGE HIGHLIGHTING */
+
+#threadTree treechildren::-moz-tree-cell(unread) {
+    -moz-appearance: none   !important;
+    background-color: #EBE0FF !important;
+    margin: -1px !important;
+}
+
+#threadTree treechildren::-moz-tree-cell(unread,selected) {
+    background-color: Highlight !important;
+}
+
+#threadTree treechildren::-moz-tree-cell-text(unread) {
+    color: #333333 !important;
+}
+
+#threadTree treechildren::-moz-tree-cell-text(unread,selected) {
+    color: #FFFFFF !important;
+}
+
+/* This matches one of my    label colors (label is applied to messages
+ * via filters in PostBox) 
+ *  *Find out your label colors by using something like PixelStick or
+ *  taking a screens    hot and inspecting/sampling in an image editing
+ *  app
+ *   *Label for work m  essages
+ *    */
+#threadTree treechildren::-moz-tree-row(lc-330099) {
+    background-color: #B5D5FF !important;
+}
+
+#threadTree treechildren::-moz-tree-cell-text(lc-330099) {
+    color: #333333 !important;
+}
+
+#threadTree treechildren::-moz-tree-cell-text(lc-330099,selected) {
+    color: #FFFFFF !important;
+}
+
+#threadTree treechildren::-moz-tree-row(lc-330099,selected) {
+    background-color: Highlight !important; 
+}
+
+/*
+ *  *ToDo messages
+ *   */
+#threadTree treechildren::-moz-tree-row(flagged) {
+    background-color: #FFE7EA !important;
+}   
+
+/***********************TARGETED***************************/
+/**********************************************************/
+/* Tool Bar */
+/**********************************************************/
+toolbar /* Menu and tool bars background */ {
+/*     background-image: url("file:///F:/Backup/Persona/Header.png") !important; */
+}
+
+.toolbarbutton-text {
+    /*color:Gold !important; /* Toolbar text color */
+    /*background-color: blue !important; /* Change background color of text */
+    font-weight:bold !important;
+}
+
+/**********************************************************/
+/* Menu Bar */
+/**********************************************************/
+.menubar-text {
+    -moz-appearance: none !important;
+    color:Gold !important;
+}
+
+
+menubar /* Tab not selected background color */ {
+/*     background-image: url("file:///F:/Backup/Persona/Footer1.png") !important; */
+}
+
+/**********************************************************/
+/* TABS */
+/**********************************************************/
+tabmail /* Area around tab bar */ {
+/*     background-image: url("file:///F:/Backup/Persona/Header1.png") !important; */
+}
+
+tab[selected = "true"] /* Selected tab */ {
+    /*background-color: #FF0000 !important;*/
+    color:#000000 !important;
+/*     background-image: url("file:///F:/Backup/Persona/Light_Wood_Gradient.jpg") !important; */
+}
+
+tab:not([selected="true"]) /* Not selected tab */ {
+/*     background-image: url("file:///F:/Backup/Persona/Wood_Gradient.jpg") !important; */
+    font-weight:bold !important;/* Tab not selected font weight */
+    color:#000000 !important; /* Tab not selected text color */
+}
+
+/**********************************************************/
+/* FOLDER TREE */
+/**********************************************************/
+
+#folderTree /* Folder pane */ {
+/*     background-image: url("file:///F:/Backup/Persona/Horz_Wood.jpg") !important; */
+/*     color:White !important; */
+}
+
+#folderTree > treechildren::-moz-tree-cell-text(hover) /* Thread pane hover text */ {
+    color:black !important;
+    background-color:yellow !important;
+}
+
+#folderPaneBox /* Folder pane border */ {
+    border: 2px solid ThreeDFace !important;
+    border-bottom: 0px !important;
+}
+
+/**********************************************************/
+/* THREAD TREES */
+/**********************************************************/
+
+/*This list is for the thread tree listbox header.*/
+#starCol,
+#threadCol,
+#unreadButtonColHeader,
+#recipientCol,
+#junkStatusCol,
+#receivedCol,
+#statusCol,
+#sizeCol,
+#tagsCol,
+#accountCol,
+#priorityCol,
+#totalCol,
+#idCol,
+#statusCol,
+#unreadCol,
+#senderCol,
+#locationCol,
+#dateCol,
+#attachmentCol,
+#subjectCol,
+#flaggedCol {
+    -moz-appearance: none !important; /* Overrides mozilla's setting */
+/*     background-image: url("file:///F:/Backup/Persona/Vert_Wood.jpg") !important; */
+    font-weight:bold !important;
+}
+
+#threadTree /* Thread pane */ {
+/*     background-image: url("file:///F:/Backup/Persona/Wood.png") !important; */
+/*     color:White !important; */
+}
+
+#threadTree > treechildren::-moz-tree-cell-text(hover) /* Overrides mozilla's setting */ {
+    color:#000000 !important; /* Folder tree hover text color */
+    background-color:#00FF00 !important; /* Folder tree hover background color */
+}    
+
+/**********************************************************/
+/* MESSAGE PANE */
+/**********************************************************/
+
+#msgHeaderView .headerValue /* Message pane header "From"/"Subject"/"TO" label */ {
+    color: black !important; /* From/Subject/To data text color */
+    font-weight:bold !important;
+}
+
+#msgHeaderView /* Message pane header "Date"/"Time" */ {
+/*     background-image:url("file:///F:/Backup/Persona/Header2.png") !important; */
+    color:black !important;
+    font-weight:bold !important;
+}
+
+#msgHeaderView .headerName /* Message header pane labels */ {
+    color: dimgrey !important;
+}
+
+
+/**********************************************************/
+/* STATUS BAR */
+/**********************************************************/
+
+statusbarpanel /* Status bar */ {
+    -moz-appearance: none !important; /* Override mozilla's settings */
+/*     background-image:url("file:///F:/Backup/Persona/Footer.png") !important; */
+    color:gold !important;
+    font-weight:bold !important;
+}
+
+/* Change menu and dialog font sizes */
+menupopup > * {
+    font-size: 12px !important
+}
+
+/* Red, non-bold unread indication with compatible background and style improvements */
+treechildren::-moz-tree-cell-text { font-weight: normal !important; color: #000 !important }
+treechildren::-moz-tree-cell-text(unread) { color: #f33 !important }
+treechildren::-moz-tree-cell-text(hasUnreadMessages-true) { color: #f33 !important }
+treechildren::-moz-tree-cell(selected) { background-color: #99f !important }
+treechildren::-moz-tree-cell { padding-bottom: 2px !important }
+
+/* Remove splitter from collapsed Thread Pane */
+#threadpane-splitter[state='collapsed'] { margin-bottom: -8px }
+
+/* Remove Folder Pane header - select 'All folders' before using this */
+#folderPaneHeader { display: none !important }
+
+/* Server header style - may also require 'color: #000 !important' if not elsewhere */
+treechildren::-moz-tree-cell(isServer-true) { margin-left: 25px !important; background-color: #dfd }
+
+/* Reduce Folder Pane width to 70px */
+#folderPaneBox { margin-left: 0px }
+#folderTree { margin-left: 15px !important }
+
+/* Reduce Toolbar height to 23px - Mac Title bar adds a further 21px */
+.toolbar-primary { margin-top: -6px !important; margin-bottom: -3px !important }
+
