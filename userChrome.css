@@ -89,7 +89,7 @@ calendar-alarm-widget[selected="true"] /*Background color of popup alarm*/ {
 }
 
 #threadTree treechildren::-moz-tree-cell-text(unread) {
-    color: #333333 !important;
+    color: red !important;
 }
 
 #threadTree treechildren::-moz-tree-cell-text(unread,selected) {
@@ -269,11 +269,13 @@ menupopup > * {
 }
 
 /* Red, non-bold unread indication with compatible background and style improvements */
+/*
 treechildren::-moz-tree-cell-text { font-weight: normal !important; color: #000 !important }
 treechildren::-moz-tree-cell-text(unread) { color: #f33 !important }
 treechildren::-moz-tree-cell-text(hasUnreadMessages-true) { color: #f33 !important }
 treechildren::-moz-tree-cell(selected) { background-color: #99f !important }
 treechildren::-moz-tree-cell { padding-bottom: 2px !important }
+*/
 
 /* Remove splitter from collapsed Thread Pane */
 #threadpane-splitter[state='collapsed'] { margin-bottom: -8px }
